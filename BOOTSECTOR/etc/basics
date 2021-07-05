@@ -1,0 +1,22 @@
+ax ah al are accumulator sub parts of the eax register
+ ^ general purpose 
+
+ al is the lowest 8 bits of eax 
+
+
+ hex ffa would be in ax , al register would be the ones used 
+
+maps like so:
+ ax registers > zeros, like 0e or 1 0 
+ in 8 bit hex 
+
+ ah would be high bits while al low 8 bits of 32 bit eax 
+
+  "generic regisers"
+
+  cs ds es 16 bit segment registers
+
+  index registers such as esi edi, lower 16bits are si di 
+
+
+

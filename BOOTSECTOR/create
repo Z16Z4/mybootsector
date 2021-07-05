@@ -1,0 +1,10 @@
+nasm -fbin *.asm -o main.bin
+
+
+
+
+
+#check machine code in vim
+
+:%!xxd
+

@@ -1,0 +1,57 @@
+;registers
+;intel syntax
+;mov destination, source/vaule
+;destination register where you want to store the source
+;vaule 13 on eax would be mov eax, 13
+;AT&T does
+;movl source, to destination
+;movl $13, %eax
+
+;add eax, 10
+;add eax, 12
+;vaule would be 22
+
+;sub registers
+; al ah etc
+;stack allows for more space, stores registers for later use 
+;push ax ; push to stack 
+;isolate ax global 
+; so 
+;push ax
+;mov ax 0xa4
+;pop ax
+;ax = unaffected by anything since i pushed the stack so != 0xa4
+;push bx
+;do stuff
+;push ax
+;do more stuff 
+;have to pop ax
+; before you can pop bx 
+;since it was the last thing on the stack 
+
+;BIOS Interrupt 
+;function a BIOS can execute to do things
+;such as 0x0e
+; 0x10
+
+
+;0x0e = moves the cursor in bios
+;0x10 = BIOS interrupt, prints stuff to screen
+
+;A boot sector cant be anything more then 512 bytes (noprmally)
+
+;times 510-($-$$) db 0 ;
+;dollar sign is the current location in memory 
+;current location in boot section
+;we're saying we want 510 - the segment of code that we have written , 
+  ;current location - the start location 
+  ;is the total amount of wrriten instructions
+;will give excatly 510
+;magic number is the keyword that tells the computer 
+;its a boot sector, run as boot sector 
+;dw 0xaa55  (LAST two bytes to become 512 bytes
+;print a character to the screen, to let it know we have successfully done this 
+;mov cursor forward
+;mov ah, 0x0e
+mov al, 'X'
+
